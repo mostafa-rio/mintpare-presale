@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --mp-bg-color: #11011e;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--mp-bg-color);
+  color: #eaeaea;
+}
+
+/* shared */
+
+.btn-primary {
+  @apply bg-teal-500 rounded-lg py-2 px-3 transition-all  hover:bg-opacity-85 focus:bg-teal-600;
+}
