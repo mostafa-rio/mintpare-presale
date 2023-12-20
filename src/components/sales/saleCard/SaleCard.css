@@ -1,0 +1,13 @@
+.sale-card {
+  display: flex;
+  height: 20rem;
+  width: 18rem;
+  flex-direction: column;
+  border-radius: 40px;
+  padding: 1rem;
+  background: linear-gradient(
+    to top right,
+    rgba(231, 76, 199, 0.7),
+    rgba(115, 49, 183, 0.7)
+  );
+}

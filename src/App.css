@@ -1,5 +1,16 @@
 .main-container {
-  max-width: 1720px;
+  max-width: 1520px;
   padding: 0 1rem;
   margin: auto;
+}
+
+.effect {
+  margin: auto;
+  background: linear-gradient(
+    to bottom right,
+    rgb(231, 76, 199),
+    rgb(115, 49, 183)
+  );
+  filter: blur(10.5em);
+  z-index: -1;
 }

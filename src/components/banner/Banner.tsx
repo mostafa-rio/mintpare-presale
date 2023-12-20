@@ -28,11 +28,14 @@ function Banner({}: Props) {
           <h2 className="text-4xl font-bold md:text-6xl text-left">
             <TypeAnimation
               sequence={[
+                '',
+                10,
                 'We are launching a rocket with the power of community',
+                5000,
               ]}
               wrapper="span"
-              deletionSpeed={50}
-              speed={50}
+              deletionSpeed={90}
+              speed={2}
               repeat={1000}
             />
           </h2>
@@ -44,22 +47,10 @@ function Banner({}: Props) {
             <button className="btn-primary">Learn More</button>
           </div>
         </div>
-        <div className="mt-14 mr-auto  md:mt-automb-20 flex flex-col lg:flex-row gap-3 flex-wrap justify-start">
-          <InfoCard
-            icon={<FaShieldHeart />}
-            title="Supported By Community"
-            description="MPPT and MPT will have the full support of our community at NFTOCEAN and MintPare"
-          />
-          <InfoCard
-            icon={<MdBarChart />}
-            title="Listing Plans"
-            description="With the help of MintPare and NFTOCEAN partners MPPT will be listed on popular markets"
-          />
-          <InfoCard
-            icon={<SiEthereum />}
-            title="Popular Networks"
-            description="MPPT and MPT will be available on popular networks such as Ethereum, and Polygon"
-          />
+        <div className="mt-20 mr-auto  md:mt-automb-20 flex flex-col lg:flex-row gap-3 flex-wrap justify-start">
+          <InfoCard icon={<FaShieldHeart />} title="Supported By Community" />
+          <InfoCard icon={<MdBarChart />} title="Direct Listing Plans" />
+          <InfoCard icon={<SiEthereum />} title="Popular Networks" />
         </div>
       </div>
     </div>

@@ -1,13 +1,20 @@
-import { useState } from 'react'
 import './App.css'
+import LearnAboutMintPare from './components/LearnAboutMintPare'
+import AboutPresale from './components/about/AboutPresale'
 import Banner from './components/banner/Banner'
+import SalesSection from './components/sales/SalesSection'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="min-h-screen">
       <Banner />
+      <div className="my-40">
+        <SalesSection />
+      </div>
+      <LearnAboutMintPare />
+      <div className="mt-20 lg:mt-60">
+        <AboutPresale />
+      </div>
     </div>
   )
 }
