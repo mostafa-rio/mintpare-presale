@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
-  --mp-bg-color: #11011e;
+  --mp-bg-color: #120727;
   font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -18,5 +22,7 @@ body {
 /* shared */
 
 .btn-primary {
-  @apply bg-teal-500 rounded-lg py-2 px-3 transition-all  hover:bg-opacity-85 focus:bg-teal-600;
+  @apply bg-indigo-500 rounded-lg py-2 px-3 transition-all 
+    hover:shadow-lg shadow-indigo-200
+  hover:bg-opacity-85 focus:bg-indigo-600;
 }

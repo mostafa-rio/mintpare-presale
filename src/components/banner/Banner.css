@@ -1,4 +1,37 @@
 .banner {
-  background: url('../../assets/bg.svg') center center no-repeat;
+  /* background: url('../../assets/bg.svg') center center no-repeat; */
   background-size: cover;
+}
+.spline-wrapper {
+  overflow: hidden;
+  opacity: 0.4;
+  top: -5%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+  overflow: hidden;
+  @media screen and (min-width: 460px) {
+    right: 0;
+    left: auto;
+    .spline {
+      scale: 100%;
+    }
+  }
+  @media screen and (min-width: 760px) {
+    right: 0;
+    top: 0;
+    scale: 100%;
+  }
+  @media screen and (min-width: 920px) {
+    opacity: 1;
+  }
+  @media screen and (min-width: 1360px) {
+    right: 5rem;
+    scale: 115%;
+    top: 2rem;
+  }
+}
+.spline {
+  transform: rotate(-20deg);
 }
