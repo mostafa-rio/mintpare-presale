@@ -5,18 +5,27 @@ import { FaShieldHeart } from 'react-icons/fa6'
 import { SiEthereum } from 'react-icons/si'
 import Spline from '@splinetool/react-spline'
 import { TypeAnimation } from 'react-type-animation'
-
+import { useWeb3Modal } from '@web3modal/wagmi/react'
+import { useAccount } from 'wagmi'
+import { GiSolarSystem } from 'react-icons/gi'
+import logo from '../../assets/logoWithText.svg'
 type Props = {}
 
 function Banner({}: Props) {
+  const { open } = useWeb3Modal()
+  const { isConnected, address } = useAccount()
   return (
     <div className="banner">
       <div className="main-container h-screen flex flex-col">
         <header className="py-3 flex justify-between align-middle">
           <h1 className="text-teal-500 my-auto">
-            <strong>MintPare Presale</strong>
+            <img className="w-32" src={logo} title="MintPare" />
           </h1>
-          <button className="btn-primary">Connect</button>
+          <button className="btn-primary" onClick={() => open()}>
+            {isConnected
+              ? 'Connected | ' + address!.substring(address!.length - 5)
+              : 'Connect'}
+          </button>
         </header>
         <div className=" spline-wrapper">
           <Spline
@@ -25,12 +34,16 @@ function Banner({}: Props) {
           />
         </div>
         <div className="max-w-3xl text-left mt-36 mr-auto">
-          <h2 className="text-4xl font-bold md:text-6xl text-left">
+          <div className="effect absolute h-80 right-0 left-0 opacity-20"></div>
+          <div className="text-8xl -rotate-12 fixed -left-3 top-14 opacity-0 lg:opacity-45 -z-10">
+            <GiSolarSystem />
+          </div>
+          <h2 className="text-4xl min-h-24 font-bold md:text-6xl text-left">
             <TypeAnimation
               sequence={[
                 '',
                 10,
-                'We are launching a rocket with the power of community',
+                "MintPare's Rocket-Fueled Adventure Begins 🚀",
                 5000,
               ]}
               wrapper="span"
@@ -40,8 +53,9 @@ function Banner({}: Props) {
             />
           </h2>
           <p className="mt-3  md:mt-8 text-gray-400 max-w-xl mr-auto md:text-xl">
-            MintPare presale tokens (MPPT) are valid erc20 tokens that will
-            beused to empower tools and products at MintPare community
+            MintPare's presale tokens (MPPT) are ERC-20 compliant, unlocking a
+            world of possibilities to empower and strengthen the MintPare
+            community.
           </p>
           <div className="mt-10">
             <button className="btn-primary">Learn More</button>

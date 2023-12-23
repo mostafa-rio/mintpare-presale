@@ -6,6 +6,7 @@
 
 .effect {
   margin: auto;
+  z-index: -1;
   background: linear-gradient(
     to bottom right,
     rgb(231, 76, 199),

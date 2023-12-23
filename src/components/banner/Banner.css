@@ -14,24 +14,22 @@
   @media screen and (min-width: 460px) {
     right: 0;
     left: auto;
-    .spline {
-      scale: 100%;
-    }
   }
   @media screen and (min-width: 760px) {
     right: 0;
     top: 0;
-    scale: 100%;
   }
   @media screen and (min-width: 920px) {
     opacity: 1;
   }
   @media screen and (min-width: 1360px) {
     right: 5rem;
-    scale: 115%;
     top: 2rem;
   }
 }
 .spline {
   transform: rotate(-20deg);
+  @media screen and (min-width: 760px) {
+    scale: 115%;
+  }
 }
