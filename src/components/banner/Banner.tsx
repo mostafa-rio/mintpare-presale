@@ -8,6 +8,7 @@ import { GiSolarSystem } from 'react-icons/gi'
 import Header from './Header'
 // import rocket from '../../assets/rocket.gif'
 import React from 'react'
+// import RocketScene from './RocketScene'
 const Spline = React.lazy(() => import('@splinetool/react-spline'))
 
 type Props = {}
@@ -19,9 +20,11 @@ function Banner({}: Props) {
         <Header />
         <div className=" spline-wrapper">
           {/* <img loading="eager" src={rocket} /> */}
+          {/* <RocketScene /> */}
           <Spline
+            scene="https://prod.spline.design/s0v65zO1y7xB6gth/scene.splinecode"
             className="spline"
-            scene="https://prod.spline.design/MyoySUjk716jMwjv/scene.splinecode"
+            // scene="https://prod.spline.design/MyoySUjk716jMwjv/scene.splinecode"
           />
         </div>
         <div className="max-w-3xl text-left mt-36 mr-auto">
