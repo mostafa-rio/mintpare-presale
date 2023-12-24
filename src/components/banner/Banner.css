@@ -25,11 +25,9 @@
   @media screen and (min-width: 1360px) {
     right: 5rem;
     top: 2rem;
+    scale: 110%;
   }
 }
 .spline {
   transform: rotate(-20deg);
-  @media screen and (min-width: 760px) {
-    scale: 115%;
-  }
 }
