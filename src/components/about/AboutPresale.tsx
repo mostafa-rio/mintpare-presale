@@ -3,7 +3,7 @@ import { FaCalendarCheck, FaCoins, FaNetworkWired } from 'react-icons/fa6'
 
 function AboutPresale() {
   return (
-    <div className="main-container">
+    <div id="about-section" className="main-container">
       <section className="lg:flex justify-center gap-10 relative">
         <div className="effect absolute h-80 right-0 left-0 opacity-20"></div>
         <div className="max-w-3xl my-auto mx-auto  text-center lg:text-left">

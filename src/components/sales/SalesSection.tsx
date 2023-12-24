@@ -8,8 +8,10 @@ function SalesSection({}: Props) {
   return (
     <div className="main-container relative">
       <div className="mb-10 max-w-xl m-auto">
-        <h3 className="text-center text-3xl">Presale Token (MPPT) Packages </h3>
-        <p className="text-center max-w-lg mx-auto mt-4 text-indigo-300">
+        <h3 className="text-center  text-indigo-100 text-3xl">
+          Presale Token (MPPT) Packages{' '}
+        </h3>
+        <p className="text-center max-w-lg mx-auto mt-4 text-indigo-100">
           MintPare Presale Token holders will be the first users to receive
           MintPare tokens once its listed
         </p>

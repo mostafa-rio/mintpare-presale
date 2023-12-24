@@ -6,7 +6,8 @@ import { SiEthereum } from 'react-icons/si'
 import { TypeAnimation } from 'react-type-animation'
 import { GiSolarSystem } from 'react-icons/gi'
 import Header from './Header'
-import React, { Suspense } from 'react'
+// import rocket from '../../assets/rocket.gif'
+import React from 'react'
 const Spline = React.lazy(() => import('@splinetool/react-spline'))
 
 type Props = {}
@@ -17,12 +18,11 @@ function Banner({}: Props) {
       <div className="main-container h-screen flex flex-col">
         <Header />
         <div className=" spline-wrapper">
-          <Suspense fallback={<div>lading...</div>}>
-            <Spline
-              className="spline"
-              scene="https://prod.spline.design/MyoySUjk716jMwjv/scene.splinecode"
-            />
-          </Suspense>
+          {/* <img loading="eager" src={rocket} /> */}
+          <Spline
+            className="spline"
+            scene="https://prod.spline.design/MyoySUjk716jMwjv/scene.splinecode"
+          />
         </div>
         <div className="max-w-3xl text-left mt-36 mr-auto">
           <div className="effect absolute h-80 right-0 left-0 opacity-20"></div>
@@ -49,7 +49,9 @@ function Banner({}: Props) {
             community.
           </p>
           <div className="mt-10">
-            <button className="btn-primary">Learn More</button>
+            <a href="#about-section" className="btn-primary">
+              Learn More
+            </a>
           </div>
         </div>
         <div className="mt-20 mr-auto  md:mt-automb-20 flex flex-col lg:flex-row gap-3 flex-wrap justify-start">

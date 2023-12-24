@@ -12,9 +12,7 @@ function Header({}: Props) {
         <img className="w-32" src={logo} title="MintPare" />
       </h1>
       <button className="btn-primary" onClick={() => open()}>
-        {isConnected
-          ? 'Connected | ' + address!.substring(address!.length - 5)
-          : 'Connect'}
+        {isConnected ? 'Connected | ' + address!.substring(0, 5) : 'Connect'}
       </button>
     </header>
   )

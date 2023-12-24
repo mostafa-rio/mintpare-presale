@@ -30,9 +30,13 @@ function SaleCard({
   const { switchNetwork, isLoading: isSwitching } = useSwitchNetwork()
   const { open: openConnectModal } = useWeb3Modal()
   const client = getPublicClient()
+
   const handleBuy = async () => {
     if (isSwitching) return
-    if (chainId !== 137) return switchNetwork?.(137)
+    if (chainId !== 137) {
+      toast('Please switch to Polygon network')
+      return switchNetwork?.(137)
+    }
     if (!isConnected) {
       return openConnectModal()
     }
@@ -56,6 +60,7 @@ function SaleCard({
     if (walletClient) await walletClient.writeContract(request)
     else toast('Failed to run transaction. Please reconnect your wallet.')
   }
+
   return (
     <div className="sale-card relative  transition-shadow hover:shadow-md hover:shadow-purple-800">
       <div className="mb-5">
