@@ -17,6 +17,7 @@ function SalesSection({}: Props) {
       </div>
       <div className="gap-3 flex flex-wrap justify-center p-3">
         <SalesCard
+          key={1}
           icon={<GiMoonOrbit />}
           packageName="Earth Package"
           availableOn="Available on Polygon"
@@ -25,6 +26,7 @@ function SalesSection({}: Props) {
           priceSymbol="MATIC"
         />
         <SalesCard
+          key={2}
           icon={<GiJupiter />}
           packageName="Jupiter Package"
           availableOn="Available on Polygon"
@@ -33,6 +35,7 @@ function SalesSection({}: Props) {
           priceSymbol="MATIC"
         />
         <SalesCard
+          key={3}
           icon={<GiGalaxy />}
           packageName="Galaxy Package"
           availableOn="Available on Polygon"

@@ -3,35 +3,26 @@ import InfoCard from './InfoCard'
 import { MdBarChart } from 'react-icons/md'
 import { FaShieldHeart } from 'react-icons/fa6'
 import { SiEthereum } from 'react-icons/si'
-import Spline from '@splinetool/react-spline'
 import { TypeAnimation } from 'react-type-animation'
-import { useWeb3Modal } from '@web3modal/wagmi/react'
-import { useAccount } from 'wagmi'
 import { GiSolarSystem } from 'react-icons/gi'
-import logo from '../../assets/logoWithText.svg'
+import Header from './Header'
+import React, { Suspense } from 'react'
+const Spline = React.lazy(() => import('@splinetool/react-spline'))
+
 type Props = {}
 
 function Banner({}: Props) {
-  const { open } = useWeb3Modal()
-  const { isConnected, address } = useAccount()
   return (
     <div className="banner">
       <div className="main-container h-screen flex flex-col">
-        <header className="py-3 flex justify-between align-middle">
-          <h1 className="text-teal-500 my-auto">
-            <img className="w-32" src={logo} title="MintPare" />
-          </h1>
-          <button className="btn-primary" onClick={() => open()}>
-            {isConnected
-              ? 'Connected | ' + address!.substring(address!.length - 5)
-              : 'Connect'}
-          </button>
-        </header>
+        <Header />
         <div className=" spline-wrapper">
-          <Spline
-            className="spline"
-            scene="https://prod.spline.design/MyoySUjk716jMwjv/scene.splinecode"
-          />
+          <Suspense fallback={<div>lading...</div>}>
+            <Spline
+              className="spline"
+              scene="https://prod.spline.design/MyoySUjk716jMwjv/scene.splinecode"
+            />
+          </Suspense>
         </div>
         <div className="max-w-3xl text-left mt-36 mr-auto">
           <div className="effect absolute h-80 right-0 left-0 opacity-20"></div>
